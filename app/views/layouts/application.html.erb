@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>StuListApp</title>
+  <title>STULIST TEMPLATE</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body id = "home">
+    <header>
+        <h1 id = "stulist">STULIST</h1>
+        <section id = "loginsignupsearch">
+            <form method = "link" action = "login.html">
+                <input type = "submit" value = "LOGIN/SIGN-UP" id = "loginsignupbtn">
+            </form>
+            <input type = "search" name = "searchbox" placeholder = "Search by keyword">
+        </section>
+    </header>
+    <nav>
+        <ul id = "navigation">
+            <li><a href = "home.html" id = "homenav">Home</a></li>
+            <li><a href = "about.html" id = "aboutnav">About</a></li>
+            <li><a href = "browse.html" id = "browsenav">Browse</a></li>
+            <li class = "subnav">
+                <a href = "myaccount.html" id = "myaccountnav">My Account</a>
+                <ul>
+                    <li><a href = "#">Create a Listing</a></li>
+                    <li><a href = "#">User Settings</a></li>
+                    <li><a href = "#">My Watchlist</a></li>
+                </ul>
+            </li>
+            
+            <li ><a href = "advancedsearch.html" id = "advancedsearchnav">Advanced Search</a></li>
+            <li ><a href = "contact.html" id = "contactnav">Contact</a></li>
+        </ul>
+    </nav>
+    <section id = "content">
+    	<%= yield %>
+    </section>
+    <footer>
+        <h2>STULIST</h2>
+        <p id = "copyright">&copy; Copyright 2013. Stulist Inc. All Rights Reserved. (This is a school project)</p>
+        <a href = "#">Home</a>
+        <a href = "#">About</a>
+        <a href = "#">Browse</a>
+        <a href = "#">FAQ</a>
+        <a href = "#">My Account</a>
+        <a href = "#">Advanced Search</a>
+    </footer>
 </body>
 </html>
