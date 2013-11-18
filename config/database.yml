@@ -3,7 +3,7 @@
 development:
   adapter: postgresql
   host: localhost
-  database: cecs470_development
+  database: cecs470_stulist
   username: cecs470
   password: cecs470
 #  pool: 5
