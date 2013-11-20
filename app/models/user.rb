@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   validates :username,  presence: true, length: { minimum: 6 }, uniqueness: { case_sensitive: false }
   VALID_ZIPCODE_REGEX = /\A\d{5}-\d{4}|\A\d{5}\z/
   validates :zipcode,  presence: true, format: { with: VALID_ZIPCODE_REGEX }
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.edu\z/i
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, length: { minimum: 6 }
