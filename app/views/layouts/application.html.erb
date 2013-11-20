@@ -6,46 +6,70 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body id = "home">
-    <header>
-        <h1 id = "stulist">STULIST</h1>
-        <section id = "loginsignupsearch">
-            <form method = "link" action = "signup.html">
-                <input type = "submit" value = "LOGIN/SIGN-UP" id = "loginsignupbtn">
-            </form>
-            <input type = "search" name = "searchbox" placeholder = "Search by keyword">
-        </section>
-    </header>
-    <nav>
-        <ul id = "navigation">
-            <li><a href = "home.html" id = "homenav">Home</a></li>
-            <li><a href = "about.html" id = "aboutnav">About</a></li>
-            <li><a href = "browse.html" id = "browsenav">Browse</a></li>
-            <li class = "subnav">
-                <a href = "myaccount.html" id = "myaccountnav">My Account</a>
-                <ul>
-                    <li><a href = "#">Create a Listing</a></li>
-                    <li><a href = "#">User Settings</a></li>
-                    <li><a href = "#">My Watchlist</a></li>
-                </ul>
-            </li>
+  <body>
+    <section id = "main" class = "container">
+        <!--Header includes logo, login/signup btn, and searchbar-->
+        <header class = "row">
+        
+            <!--Logo-->
+            <div class = "span3">
+                <h1><a href = "#">STULIST</a></h1>
+            </div>
             
-            <li ><a href = "advancedsearch.html" id = "advancedsearchnav">Advanced Search</a></li>
-            <li ><a href = "contact.html" id = "contactnav">Contact</a></li>
-        </ul>
-    </nav>
-    <section id = "content">
-    	<%= yield %>
+            <!--Login/Signup btn and searchbar-->
+            <section id = "loginsignupsearch" class = "span4">
+                <form method = "link" action = "signup.html">
+                    <input type = "submit" value = "LOGIN/SIGN-UP" id = "loginsignupbtn">
+                </form>
+                <input type = "search" name = "searchbox" placeholder = "Search by keyword">
+            </section>
+            
+        </header>
+        <!-- end header -->
+        
+        <!--Top navigation bar-->
+        <nav class = "row">
+            <div class="navbar" id = "topnav">
+              <div class="navbar-inner">
+                <div class="container">
+                  <ul class="nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about.html">About/FAQ</a></li>
+                    <li><a href="browse.html">Browse</a></li>
+                    <li><a href="myaccount.html">My Account</a></li>
+                    <li><a href="advancesearch.html">Advanced Search</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </nav>
+        <!--End top navigation bar-->
+        
+        <!--Content of the page-->
+            <%= yield %>
+        <!--End #home-->
+        
+        <!--Footer-->
+        <footer>
+            <p id = "footerhead">StuList</p>
+            <p id = "copyright">&copy; Copyright 2013. Stulist Inc. All Rights Reserved. (This is a school project)</p>
+            <a href = "home.html">Home</a>
+            <a href = "about.html">About/FAQ</a>
+            <a href = "browse.html">Browse</a>
+            <a href = "myaccount.html">My Account</a>
+            <a href = "advancesearch.html">Advanced Search</a>
+            <a href = "contact.html">Contact</a>
+        </footer>
+        <!--End footer-->
     </section>
-    <footer>
-        <h2>STULIST</h2>
-        <p id = "copyright">&copy; Copyright 2013. Stulist Inc. All Rights Reserved. (This is a school project)</p>
-        <a href = "#">Home</a>
-        <a href = "#">About</a>
-        <a href = "#">Browse</a>
-        <a href = "#">FAQ</a>
-        <a href = "#">My Account</a>
-        <a href = "#">Advanced Search</a>
-    </footer>
-</body>
+    <!--End #main-->
+    
+    <!--script includes-->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery_browse.js"></script>
+    <!--end script includes-->
+  </body>
+  <!--body end-->
 </html>
