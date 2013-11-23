@@ -12,8 +12,7 @@
         <header class = "row">
         
             <!--Logo-->
-            <div class = "span3">
-                <h1><a href = "#">STULIST</a></h1>
+            <div class = "span3" id = "header-logo">
             </div>
             
             <!--Login/Signup btn and searchbar-->
@@ -21,11 +20,11 @@
                 <% if signed_in? %>
                     <%= button_to "SIGN OUT", signout_path, method: "delete", id: "signoutbtn" %>
                 <% else %>
-                    <form method = "get" action = "signup.html">
+                    <form method = "get" action = "signup.html" id = "signupform">
                         <input type = "submit" value = "SIGN-UP" id = "signupbtn">
                     </form>
 
-                    <form method = "get" action = "signin.html">
+                    <form method = "get" action = "signin.html" id = "loginform">
                         <input type = "submit" value = "LOG-IN" id = "loginbtn">
                     </form>
                 <% end %>

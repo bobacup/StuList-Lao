@@ -41,7 +41,7 @@ header h1{
 #signupbtn,
 #loginbtn{
  margin-top: 10%;
- width: 36.5%;
+ width: 100%;
  background-size: 16px 16px;
  background-repeat: no-repeat;
  background-position: 90% 40%;
@@ -56,6 +56,18 @@ header h1{
 #signupbtn
 {
  background-image: url(http://files.softicons.com/download/toolbar-icons/wpzoom-developer-icon-set-by-wpzoom/png/32/closed-lock.png);   
+}
+
+#loginform, #signupform{
+	width: 50%;
+}
+
+#loginform{
+	float: left;
+}
+
+#signupform{
+	float: right;
 }
 
 #loginsignupsearch input[name = searchbox]{
