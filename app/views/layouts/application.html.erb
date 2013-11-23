@@ -18,9 +18,22 @@
             
             <!--Login/Signup btn and searchbar-->
             <section id = "loginsignupsearch" class = "span4">
-                <form method = "link" action = "signup.html">
-                    <input type = "submit" value = "LOGIN/SIGN-UP" id = "loginsignupbtn">
-                </form>
+                <% if signed_in? %>
+                    <%= link_to "SIGN OUT", signout_path, method: "delete" %>
+                    <!--
+                    <form method = "link" action = "signout.html">
+                        <input type = "submit" value = "SIGN-OUT" id = "signoutbtn">
+                    </form> 
+                    -->
+                <% else %>
+                    <li><%= link_to "SIGN IN", signin_path %></li>
+                    <li><%= link_to "SIGN UP", signup_path %></li>
+                    <!--
+                    <form method = "link" action = "signup.html">
+                        <input type = "submit" value = "LOGIN/SIGN-UP" id = "loginsignupbtn">
+                    </form>
+                    -->
+                <% end %>
                 <input type = "search" name = "searchbox" placeholder = "Search by keyword">
             </section>
             
