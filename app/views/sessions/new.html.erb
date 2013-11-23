@@ -1,18 +1,38 @@
-<% provide(:title, "Sign in") %>
-<h1> Sign in </hi>
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(:session, url: sessions_path) do |f| %>
+<nav class = "row">
+    <div class="navbar" id = "topnav">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="about.html">About/FAQ</a></li>
+            <li><a href="browse.html">Browse</a></li>
+            <li><a href="myaccount.html">My Account</a></li>
+            <li><a href="advancesearch.html">Advanced Search</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</nav>
 
-      <%= f.label :username %>
-      <%= f.text_field :username %>
+<section id = "signin" class="row">
+  <section id = "signincontent" class="container">
+    <h2>Sign In</h2>
+    <div class="row">
+      <div class="span6 offset3">
+        <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+          <%= f.label :username %>
+          <%= f.text_field :username %>
 
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-    <% end %>
+          <%= f.label :password %>
+          <%= f.password_field :password %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
-  </div>
-</div>
+          <%= f.submit "Sign in", class: "btn btn-large btn-primary", id: "loginbutton" %>
+        <% end %>
+
+        <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+      </div>
+    </div>
+  </section>
+</section>

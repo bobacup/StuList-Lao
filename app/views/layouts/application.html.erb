@@ -19,20 +19,15 @@
             <!--Login/Signup btn and searchbar-->
             <section id = "loginsignupsearch" class = "span4">
                 <% if signed_in? %>
-                    <%= link_to "SIGN OUT", signout_path, method: "delete" %>
-                    <!--
-                    <form method = "link" action = "signout.html">
-                        <input type = "submit" value = "SIGN-OUT" id = "signoutbtn">
-                    </form> 
-                    -->
+                    <%= button_to "SIGN OUT", signout_path, method: "delete", id: "signoutbtn" %>
                 <% else %>
-                    <li><%= link_to "SIGN IN", signin_path %></li>
-                    <li><%= link_to "SIGN UP", signup_path %></li>
-                    <!--
-                    <form method = "link" action = "signup.html">
-                        <input type = "submit" value = "LOGIN/SIGN-UP" id = "loginsignupbtn">
+                    <form method = "get" action = "signup.html">
+                        <input type = "submit" value = "SIGN-UP" id = "signupbtn">
                     </form>
-                    -->
+
+                    <form method = "get" action = "signin.html">
+                        <input type = "submit" value = "LOG-IN" id = "loginbtn">
+                    </form>
                 <% end %>
                 <input type = "search" name = "searchbox" placeholder = "Search by keyword">
             </section>
