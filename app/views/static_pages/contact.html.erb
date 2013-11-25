@@ -3,16 +3,34 @@
               <div class="navbar-inner">
                 <div class="container">
                   <ul class="nav">
-                    <li><a href="/">Home</a></li>
+                    <li><a href = "..">Home</a></li>
                     <li><a href="about.html">About/FAQ</a></li>
                     <li><a href="browse.html">Browse</a></li>
-                    <li><a href="myaccount.html">My Account</a></li>
-                    <li><a href="advancesearch.html">Advanced Search</a></li>
-                    <li class="active"><a href="contact.html">Contact</a></li>
+                    <li class = "subnav">
+                        <a href = "myaccount.html" id = "myaccountnav">My Account</a>
+                        <ul id = "asearchdropdown">
+                            <li><a href = "#">Create a Listing</a></li>
+                            <li><a href = "#">User Settings</a></li>
+                            <li><a href = "#">My Watchlist</a></li>
+                        </ul>
+                    </li>    
+                    <li id = "asearch"><a href="advancesearch.html">Advanced Search</a></li>
+                    <li class = "active"><a href="contact.html">Contact</a></li>
                   </ul>
                 </div>
               </div>
             </div>
         </nav>
 
-<p>StuList contact page!</p>
+        <section id = "contact" class="row">
+            <section id = "contactcontent" class="row">
+                <section id = "infoandsend" class = "row">
+                    <h2 id = "contactinfoheader">Contact info</h2>
+                    <h2 id = "sendmessageheader">Send us a message</h2>
+                    <section id = "contactinfo">
+                    </section>
+                    <section id = "sendmessage">
+                    </section>
+                </section>
+            </section>
+        </section>

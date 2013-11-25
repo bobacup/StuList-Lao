@@ -86,7 +86,13 @@ header h1{
  margin-left: 0 !important;
 }
 
-#browse, #home, #about, #signup, #signin{
+/*content container on main pages*/
+#browse, 
+#home, 
+#about, 
+#signup, 
+#signin, 
+#contact{
  background: white;
  min-height: 700px;
 }
@@ -118,7 +124,36 @@ header h1{
 /*hover over top nav list element changes background color*/
 #topnav .nav>li:hover{
  background:  #0D4F88;
+}
 
+#asearchdropdown{
+ display:none;
+ position: absolute;
+ width: 16%;
+ list-style-type: none;
+ background: #333;
+ margin: 0;
+ text-align: center;
+}
+
+#topnav .nav>li:hover #asearchdropdown{
+ display:block;
+}
+
+#asearchdropdown li {
+ border-top: 2px solid white;
+ line-height: 35px;
+ width: 100%;
+}
+
+#asearchdropdown li>a{
+ color: #FFFFFF;
+ width: 100%;
+ text-decoration: none;
+}
+
+#asearchdropdown :hover{
+ background: #0D4F88;
 }
 
 /*remove text shadow from bootstrap*/
@@ -138,8 +173,7 @@ header h1{
 
 /*top nav highlight when active*/
 #topnav .nav>.active>a{
- background: #0D4F88;
- color: black !important;
+ background: #0D4F88 !important;
  text-shadow: none !important; 
 }
 
@@ -183,13 +217,14 @@ footer a{
  font-size: 1em;
 }
 
-#about h2{
+#about h2, #contact h2{
  font-size: 2em;
- color: #0D4F88;
+ color: #3276b1;
 }
 
 /*end About page styling*/
 /*============================================================*/
+/*styling the Browse page*/
 #browsecategories{
  border-top-right-radius: 25px;
  border-bottom-right-radius: 25px;
@@ -225,4 +260,38 @@ footer a{
 #browsecontent{
  min-height: 700px;
  height: 100%;
+}
+
+/*end Browse page styling*/
+/*============================================================*/
+/*styling the Contact page*/
+
+#contact{
+ padding-bottom: 2.5%;
+}
+#contactinfo, #contactinfoheader{
+ width: 25%;
+ margin-left: 5%;
+ margin-right: 2.5%;
+ float: left;
+}
+#sendmessage, #sendmessageheader{
+ width: 60%;
+ margin-left: 0;
+ margin-right: 5%;	
+ float: right;
+}
+
+#contactheader{
+ background: #FFFFFF;
+}
+
+#infoandsend{
+ height: 680px;
+}
+
+#contactinfo, #sendmessage{
+ height: 95%;
+ border: 4px solid #3276b1;
+ border-radius: 15px;
 }
